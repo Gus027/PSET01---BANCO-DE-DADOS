@@ -11,5 +11,11 @@ Trabalho proposto pelo professor Abrantes Araujo Silva Filho - Design e Desenvol
 + Flexibilidade
 + Gerenciamente
 + Transparencia de dados
+### IMPORTANTE: 
+#### No MariaDB, é importante relembrar, que tem uma diferença de criação de Database e Schema...Nela, a database seria a propria Schema, então, caso o seu projeto não for iniciado adequadamente, com base do script que deixei disponivel nesta pagina, recomendo que crie o seguinte:
+#### Criação da database / Schema :
++ O primeiro comando seria : CREATE DATABASE < nome > ;
++ Logo em seguida: USE < nome > ;
+#### Assim, você ira conseguir com exito, rodar o script deste SGBD.
 
 
