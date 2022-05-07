@@ -23,6 +23,11 @@ SET SEARCH_PARTH TO elmasri, "$user", public;
 
 SET SEARCH_PATH TO elmasri, "$user", public;
 
+
+
+
+
+
 CREATE TYPE elmasri.sexo AS ENUM('M','F');
 
 CREATE TABLE elmasri.funcionario (
