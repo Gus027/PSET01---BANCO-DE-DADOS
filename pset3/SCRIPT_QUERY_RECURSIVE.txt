@@ -1,0 +1,18 @@
+
+~~MARIADB
+
+WITH hierarquia(codigo, codigo_pai, nome)
+AS
+(
+    SELECT  codigo, codigo_pai, nome
+    FROM classificacao
+    WHERE codigo_pai IS NULL 
+    -- Perceba que aqui no âncora temos como retorno somente o diretor.
+    UNION ALL -- Ligação para a recursão
+    SELECT e.codigo, e.codigo_pai, e.nome
+    FROM classificacao e
+    INNER JOIN classificacao h ON h.codigo= e.codigo_pai 
+)
+SELECT codigo,codigo_pai,nome
+FROM hierarquia
+ORDER BY codigo,codigo_pai;
